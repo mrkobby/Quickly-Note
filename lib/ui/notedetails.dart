@@ -167,15 +167,20 @@ class ExtendedSection extends StatelessWidget {
       child: ListView(
         shrinkWrap: true,
         children: <Widget>[
-          ExtendedInfoTab(
-            fieldTitle: "Title",
-            fieldInfo: note.title,
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 18.0),
+            child: Center(
+              child: Text(
+                note.title,
+                style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 20),
+              ),
+            ),
           ),
           Divider(
             color: Colors.grey,
           ),
           ExtendedInfoTab(
-            fieldTitle: "Body",
+            fieldTitle: "Body:",
             fieldInfo: note.body,
           ),
            Divider(
@@ -204,20 +209,24 @@ class ExtendedInfoTab extends StatelessWidget {
           children: <Widget>[
             Padding(
               padding: EdgeInsets.only(bottom: 8.0),
-              child: Text(
-                fieldTitle,
-                style: TextStyle(
-                  fontSize: 12,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
+              child: Center(
+                child: Text(
+                  fieldTitle,
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
-            Text(
-              fieldInfo,
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.grey,
+            Center(
+              child: Text(
+                fieldInfo,
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey,
+                ),
               ),
             ),
           ],

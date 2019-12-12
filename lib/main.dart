@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:quickly_note/ui/homepage.dart';
 import 'package:provider/provider.dart';
 
 import 'bloc/global_bloc.dart';
 
-void main() => runApp(QuickNotes());
+void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    systemNavigationBarColor: Colors.black,
+    statusBarColor: Colors.black,
+  ));
+  runApp(QuickNotes());
+}
 
 class QuickNotes extends StatefulWidget {
   @override
@@ -31,8 +38,6 @@ class _QuickNotesState extends State<QuickNotes> {
     );
   }
 }
-
-
 
 // import 'package:flutter/material.dart';
 // import 'package:quickly_note/ui/homepage.dart';
@@ -92,4 +97,3 @@ class _QuickNotesState extends State<QuickNotes> {
 //         loaderColor: Colors.white);
 //   }
 // }
-
