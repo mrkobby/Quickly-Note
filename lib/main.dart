@@ -31,6 +31,7 @@ class _QuickNotesState extends State<QuickNotes> {
     return Provider<GlobalBloc>.value(
       value: globalBloc,
       child: MaterialApp(
+        title: "Quickly Note",
         debugShowCheckedModeBanner: false,
         home: HomePage(),
         theme: ThemeData(primaryColor: Colors.black),
