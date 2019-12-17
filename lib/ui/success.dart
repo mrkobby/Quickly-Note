@@ -34,7 +34,7 @@ class _SuccessState extends State<Success> {
             child: Container(
               width: MediaQuery.of(context).size.width / 2.743,
               child: FlareActor(
-                "assets/animations/Success Check.flr",
+                "assets/animations/Success_Check.flr",
                 alignment: Alignment.center,
                 fit: BoxFit.contain,
                 animation: "Untitled",
